@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 text-slate-900 antialiased min-h-screen;
+  }
+
+  * {
+    @apply border-slate-200;
+  }
+}
+
+@layer components {
+  /* Professional Card Styles */
+  .card {
+    @apply rounded-xl bg-white shadow-lg ring-1 ring-slate-200 p-6 transition-all duration-200 hover:shadow-xl hover:ring-slate-300;
+  }
+
+  .card-elevated {
+    @apply rounded-xl bg-white shadow-xl ring-1 ring-slate-200 p-6;
+  }
+
+  /* Professional Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-slate-300 transition-all duration-200 hover:bg-slate-50 hover:ring-slate-400 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-red-600 to-rose-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:from-red-700 hover:to-rose-700 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-success {
+    @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  /* Input Styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  textarea,
+  select {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none hover:border-slate-400;
+  }
+
+  .input {
+    @apply mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none hover:border-slate-400;
+  }
+
+  .input-error {
+    @apply border-red-300 focus:border-red-500 focus:ring-red-500/20;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+
+  .badge-success {
+    @apply bg-emerald-100 text-emerald-800;
+  }
+
+  .badge-warning {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-pending {
+    @apply bg-slate-100 text-slate-800;
+  }
+
+  /* Navigation Link Styles */
+  .nav-link {
+    @apply relative px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-700 transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-sm;
+  }
+
+  .nav-link-active {
+    @apply rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md !important;
+  }
+
+  .nav-link-active:hover,
+  .nav-link-active:focus,
+  .nav-link-active:active {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md !important;
+  }
+
+  .nav-link-active span,
+  .nav-link-active svg {
+    @apply text-white !important;
+  }
+
+  .nav-link:hover:not(.nav-link-active) {
+    @apply bg-blue-50 text-blue-700;
+  }
+
+  /* Sidebar Styles */
+  .sidebar-nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200;
+  }
+
+  .sidebar-nav-link-active {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md;
+  }
+
+  /* Stat Card */
+  .stat-card {
+    @apply rounded-xl bg-gradient-to-br from-white to-slate-50/50 p-6 shadow-md ring-1 ring-slate-200/50;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+}
+
+a {
+  @apply text-blue-600 hover:text-blue-700 transition-colors;
+}
+
