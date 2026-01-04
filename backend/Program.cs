@@ -240,8 +240,8 @@ using (var scope = app.Services.CreateScope())
         dbContext.SaveChanges();
 
         Console.WriteLine("✅ New member created!");
-        Console.WriteLine("   Email: newmember@community.com");
-        Console.WriteLine("   Password: Member@123");
+        //Console.WriteLine("   Email: newmember@community.com");
+       // Console.WriteLine("   Password: Member@123");
     }
 }
 
